@@ -31,7 +31,7 @@ and spaghetti coding.
 
 ## Demos
 
-* Infinite scroll list: [Code](http://github.com/mstn/infinite-scroll-demo) 
+* Infinite scroll list: [Code](http://github.com/mstn/infinite-scroll-demo) - [Demo](http://cat-infinite-scroll.meteor.com/)
 * Shopping cart (coming soon)
 * Filtered infinite list (coming soon)
 * Todo app (coming soon)
@@ -96,7 +96,7 @@ The implementation follows [4].
 
      ...
 
-   });
+    });
 
 The rest of a component syntax looks like FlowComponents with a main difference:
 the created hook returns the initial state. The initial state is made of simple values

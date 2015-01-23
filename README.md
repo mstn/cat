@@ -31,8 +31,7 @@ and spaghetti coding.
 
 ## Demos
 
-* Infinite scroll list: (coming very soon)
-<!--[Code](http://github.com/mstn/infinite-scroll-demo) - [Demo](http://infinite.leibnizwheel.it).-->
+* Infinite scroll list: [Code](http://github.com/mstn/infinite-scroll-demo) 
 * Shopping cart (coming soon)
 * Filtered infinite list (coming soon)
 * Todo app (coming soon)
@@ -103,22 +102,24 @@ The rest of a component syntax looks like FlowComponents with a main difference:
 the created hook returns the initial state. The initial state is made of simple values
 (e.g. strings, numbers) or (reactive) functions.
 
+See demo code [here](https://github.com/mstn/infinite-scroll-demo).
+
 Components are instantiated. We can have multiple instances of the same component at
 the same time.
 
-   instance = Cat.build('infinite-scroll', {
-    // this properties are associated to this particular instance
-    // infinite-scroll is generic, but an instance is particular
-    template:'posts',
-    limit:5,
-    data: Posts
-   }, {
-    // non reactive attributes
-    // if you don't need reaction, don't use it. It is more expensive!
-    title:'My posts',
-    sub:'posts',
-    inc:5
-   });
+    instance = Cat.build('infinite-scroll', {
+     // this properties are associated to this particular instance
+     // infinite-scroll is generic, but an instance is particular
+     template:'posts',
+     limit:5,
+     data: Posts
+    }, {
+     // non reactive attributes
+     // if you don't need reaction, don't use it. It is more expensive!
+     title:'My posts',
+     sub:'posts',
+     inc:5
+    });
 
 I preferred to separate building from rendering.
 

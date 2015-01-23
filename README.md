@@ -56,7 +56,7 @@ the terms "event" used in Meteor.
 
 Here, an example with comments of an infinite-scroll component.
 The implementation follows [4].
-
+```javascript
      // we define a component giving a name and a description
      Cat.define('infinite-scroll', {
 
@@ -97,7 +97,7 @@ The implementation follows [4].
      ...
 
     });
-
+```
 The rest of a component syntax looks like FlowComponents with a main difference:
 the created hook returns the initial state. The initial state is made of simple values
 (e.g. strings, numbers) or (reactive) functions.
@@ -106,7 +106,7 @@ See demo code [here](https://github.com/mstn/infinite-scroll-demo).
 
 Components are instantiated. We can have multiple instances of the same component at
 the same time.
-
+```javascript
     instance = Cat.build('infinite-scroll', {
      // this properties are associated to this particular instance
      // infinite-scroll is generic, but an instance is particular
@@ -120,13 +120,13 @@ the same time.
      sub:'posts',
      inc:5
     });
-
+```
 I preferred to separate building from rendering.
 
 At the moment for rendering
-
+```javascript
     instance.render('#posts');
-
+```
 However, I am going to build a composed function build+render to do something similar
 as FlowComponents.
 
